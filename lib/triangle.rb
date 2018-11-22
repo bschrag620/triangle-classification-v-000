@@ -8,6 +8,7 @@ class Triangle
     puts "#{a+b}, #{b+c}, #{c+a}"
     puts "#{c}, #{a}, #{b}"
     if @a + @b <= @c || @a + @c <= @b || @b + @c <= @a
+      puts "made it to error"
       begin
         raise TriangleError
       rescue TriangleError => error
