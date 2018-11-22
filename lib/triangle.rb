@@ -5,16 +5,18 @@ class Triangle
     @a = a
     @b = b
     @c = c
-  end
-
-  def kind
     if @a + @b <= @c || @a + @c <= @b || @b + @c <= @a
       begin
         raise TriangleError
       rescue TriangleError => error
         error.message
       end
-    elsif @a == @b
+    end
+  end
+
+  def kind
+
+    if @a == @b
       if @b == @c
         :equilateral
       else
