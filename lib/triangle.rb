@@ -5,7 +5,8 @@ class Triangle
     @a = a
     @b = b
     @c = c
-    puts "#{a}, #{b}, #{c}"
+    puts "#{a+b}, #{b+c}, #{c+a}"
+    puts "#{c}, #{a}, #{b}"
     if @a + @b <= @c || @a + @c <= @b || @b + @c <= @a
       begin
         raise TriangleError
